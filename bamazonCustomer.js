@@ -10,16 +10,16 @@ var connection = mysql.createConnection({
   user: "root",
   password: "<input here>",
   database: "Bamazon"
-})
+});
 
 // display user id
 connection.connect(function(err) {
   console.log("Connected as id: "+connection.threadId);
-})
+});
 
 // table created with headers
 var table = new Table({
-    head: ['ITEM ID', 'PRODUCT NAME', 'DEPARTMENT NAME', 'PRICE', 'STOCK QUALITY']
+    head: ['ITEM ID', 'PRODUCT NAME', 'DEPARTMENT NAME', 'PRICE', 'STOCK QUANTITY']
 });
 
 // connection that calls upon the products table and pushes data into the table
@@ -31,7 +31,7 @@ connection.query("SELECT * FROM products", function(err, res) {
     );
   }
   console.log(table.toString());
-  // user prompts
+  // user prompts using inquirer
   inquirer.prompt([
     {
       type: "input",
@@ -43,7 +43,20 @@ connection.query("SELECT * FROM products", function(err, res) {
       message: "How many units of the item would you like to buy?",
       name: "unitOutput"
     },
+    // takes in user inputs
   ]).then(function(user){
-      console.log("\n You purchased " + user.unitOutput + " units of ITEM " + user.itemInput);
-  })
-})
+      // outputs what the user has purchased
+      console.log("\n You purchased " + user.unitOutput + " unit(s) of item " + user.itemInput);
+
+      // assigns the the correct array index
+      var itemInput = parseInt(user.itemInput);
+      itemInput = itemInput - 1;
+      var unitOutput = parseInt(user.unitOutput);
+
+      // displays the total cost of the item(s)
+      var price = res[itemInput].price;
+      console.log(" The total cost of your purchase is : " + price * unitOutput);
+
+      // stock quantity
+  });
+});
