@@ -45,18 +45,30 @@ connection.query("SELECT * FROM products", function(err, res) {
     },
     // takes in user inputs
   ]).then(function(user){
-      // outputs what the user has purchased
-      console.log("\n You purchased " + user.unitOutput + " unit(s) of item " + user.itemInput);
-
       // assigns the the correct array index
       var itemInput = parseInt(user.itemInput);
       itemInput = itemInput - 1;
       var unitOutput = parseInt(user.unitOutput);
+      // variable for the quantity available
+      var stock = res[itemInput].stock_quantity - user.unitOutput;
 
-      // displays the total cost of the item(s)
-      var price = res[itemInput].price;
-      console.log(" The total cost of your purchase is : " + price * unitOutput);
-
-      // stock quantity
+      // if statement that checks whether there is enough items for an order and total cost
+      if (user.unitOutput > stock) {
+        console.log ("\nInsufficient quantity!\n");
+      } else {
+        // updates the sql table based on what the user orders
+        connection.query("UPDATE products SET ? WHERE ?", [{
+          stock_quantity: stock
+        }, {
+          item_id: user.itemInput
+        }], function(err, res) {});
+        // displays the total cost of the item(s)
+        var price = res[itemInput].price;
+        // outputs what the user has purchased
+        console.log("\nYou added " + user.unitOutput + " unit(s) of item " + user.itemInput + " into your cart");
+        console.log("There is only " + stock + " unit(s) of this item left");
+        console.log("\nThe total cost of your cart is : $" + price * unitOutput + "\n");
+      }
+      process.exit();
   });
 });
