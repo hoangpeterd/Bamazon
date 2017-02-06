@@ -24,4 +24,4 @@ If the item is in stock, the app will let the customer know:
 - How many units are left
 - The Total cost of item(s) in the cart
 
-If the item is out of stock, the app will let the customer know that there is an *Insufficient quantity!* 
+If the item is out of stock, the app will let the customer know that there is an: *Insufficient quantity!* 
