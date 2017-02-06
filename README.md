@@ -27,4 +27,4 @@ If the item is in stock, the app will let the customer know:
 If the item is out of stock, the app will let the customer know that there is an: *Insufficient quantity!* 
 
 ### Screenshots
- (https://github.com/hoangpeterd/Bamazon/blob/master/Screenshots/Screen%20Shot%202017-02-05%20at%2011.27.14%20PM.png?raw=true)
+ [logo]: https://github.com/hoangpeterd/Bamazon/blob/master/Screenshots/Screen%20Shot%202017-02-05%20at%2011.27.14%20PM.png?raw=true
