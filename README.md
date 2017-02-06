@@ -28,3 +28,5 @@ If the item is out of stock, the app will let the customer know that there is an
 
 ### Screenshots
 ![Product Table](https://github.com/hoangpeterd/Bamazon/blob/master/Screenshots/Screen%20Shot%202017-02-05%20at%2011.27.14%20PM.png?raw=true)
+![Product Table](https://github.com/hoangpeterd/Bamazon/blob/master/Screenshots/Screen%20Shot%202017-02-05%20at%2011.27.54%20PM.png?raw=true)
+![Product Table](https://github.com/hoangpeterd/Bamazon/blob/master/Screenshots/Screen%20Shot%202017-02-05%20at%2011.28.24%20PM.png?raw=true)
