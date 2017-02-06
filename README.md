@@ -5,5 +5,7 @@ Bamazon is an Amazon-like storefront built with Node.js and MySQL. The app will 
 
 ### Walkthrough
 Upon starting Bamazon the user will be presented with a table of the products for sale.
-| ITEM ID | PRODUCT NAME | DEPARTMENT NAME | PRICE | STOCK QUANTITY |
-|---------|:------------:|:---------------:|:-----:|---------------:|
+
+ITEM ID | PRODUCT NAME | DEPARTMENT NAME | PRICE | STOCK QUANTITY
+|---|---|---|---|---|
+| 1 | Example Book | Books | Example Price | Stock |
