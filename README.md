@@ -15,4 +15,4 @@ ITEM ID | PRODUCT NAME | DEPARTMENT NAME | PRICE | STOCK QUANTITY
 
 The customer will then be asked to provide the following: 
 - ITEM ID of the product they would like to buy.
-- How many units of the product they would like to buy. 
+- How many units of the selected product that they would like to buy. 
