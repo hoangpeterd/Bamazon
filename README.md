@@ -13,5 +13,6 @@ ITEM ID | PRODUCT NAME | DEPARTMENT NAME | PRICE | STOCK QUANTITY
  1 | Inception | Movies | 10 | 100 
  5 | Wolfenstein: The New Order | Games | 20 | 100
 
-- The customer will then be prompted to select the ITEM ID of the product they would like to buy.
-- A second message will ask how many units of the product they would like to buy. 
+The customer will then be asked to provide the following: 
+- ITEM ID of the product they would like to buy.
+- How many units of the product they would like to buy. 
